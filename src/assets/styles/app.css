@@ -1,0 +1,14 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #fff;
+  background: #292a33;
+  overflow: hidden;
+}
+
+.draw {
+  padding: 15px 30px;
+}

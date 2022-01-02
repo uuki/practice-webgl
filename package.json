@@ -1,0 +1,25 @@
+{
+  "name": "practice-webgl",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uuki/practice-webgl.git"
+  },
+  "author": "uuki <uuki.dev@gmail.com>",
+  "license": "ISC",
+  "homepage": "https://github.com/uuki/practice-webgl#readme",
+  "devDependencies": {
+    "parcel": "^2.0.1"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "dependencies": {
+    "p5": "^1.4.0"
+  }
+}

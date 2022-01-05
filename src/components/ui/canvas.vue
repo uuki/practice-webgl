@@ -28,6 +28,7 @@ export default {
       canvasHeight: 600,
       r: 0,
       x: 0,
+      s: '0',
     }
   },
   mounted() {
@@ -46,8 +47,23 @@ export default {
         p5.createCanvas(this.canvasWidth, this.canvasHeight)
       }
       p5.draw = (): void => {
+        this.x += 10
+        if (this.x > this.canvasWidth + this.r) {
+          this.x = -this.r
+        }
+
         this.p5?.clear()
         this.p5?.circle(this.x, this.canvasHeight / 2, this.r * 2)
+
+        if ((this.p5?.frameCount || 0) % 30 === 0) {
+          this.s = this.p5?.frameRate().toFixed(0) as string
+        }
+
+        this.p5?.push()
+        this.p5?.noStroke()
+        this.p5?.fill(240)
+        this.p5?.text(this.s, 20, 20)
+        this.p5?.pop()
       }
     },
     mouseClicked() {

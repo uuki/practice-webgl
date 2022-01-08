@@ -45,26 +45,32 @@ export default {
         this.x = this.r
 
         p5.createCanvas(this.canvasWidth, this.canvasHeight)
+        // p5.circle(this.canvasWidth / 2, this.canvasHeight / 2, 200)
+
+        p5.strokeWeight(10) // フチの太さ
+        p5.stroke(100) // フチの色
+        p5.fill(240) // 塗りの色
+        p5.circle(this.canvasWidth / 2, this.canvasHeight / 2, 300)
       }
-      p5.draw = (): void => {
-        this.x += 10
-        if (this.x > this.canvasWidth + this.r) {
-          this.x = -this.r
-        }
+      // p5.draw = (): void => {
+      //   this.x += 10
+      //   if (this.x > this.canvasWidth + this.r) {
+      //     this.x = -this.r
+      //   }
 
-        this.p5?.clear()
-        this.p5?.circle(this.x, this.canvasHeight / 2, this.r * 2)
+      //   this.p5?.clear()
+      //   this.p5?.circle(this.x, this.canvasHeight / 2, this.r * 2)
 
-        if ((this.p5?.frameCount || 0) % 30 === 0) {
-          this.s = this.p5?.frameRate().toFixed(0) as string
-        }
+      //   if ((this.p5?.frameCount || 0) % 30 === 0) {
+      //     this.s = this.p5?.frameRate().toFixed(0) as string
+      //   }
 
-        this.p5?.push()
-        this.p5?.noStroke()
-        this.p5?.fill(240)
-        this.p5?.text(this.s, 20, 20)
-        this.p5?.pop()
-      }
+      //   this.p5?.push()
+      //   this.p5?.noStroke()
+      //   this.p5?.fill(240)
+      //   this.p5?.text(this.s, 20, 20)
+      //   this.p5?.pop()
+      // }
     },
     mouseClicked() {
       this.x += 10

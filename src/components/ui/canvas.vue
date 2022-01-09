@@ -47,10 +47,16 @@ export default {
         p5.createCanvas(this.canvasWidth, this.canvasHeight)
         // p5.circle(this.canvasWidth / 2, this.canvasHeight / 2, 200)
 
-        p5.strokeWeight(10) // フチの太さ
-        p5.stroke(100) // フチの色
-        p5.fill(240) // 塗りの色
-        p5.circle(this.canvasWidth / 2, this.canvasHeight / 2, 300)
+        p5.strokeWeight(10)
+        p5.stroke(240)
+        p5.noFill() // 塗りなし
+        // 幅 / 4なので、横25%の位置に円を表示する
+        p5.circle(this.canvasWidth / 4, this.canvasWidth / 2, 100)
+
+        p5.noStroke() // ストロークなし
+        p5.fill(240)
+        // 幅 / 4 * 3なので、横75%の位置に円を表示する
+        p5.circle((this.canvasWidth / 4) * 3, this.canvasWidth / 2, 100)
       }
       // p5.draw = (): void => {
       //   this.x += 10
